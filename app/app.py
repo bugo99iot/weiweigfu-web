@@ -6,7 +6,7 @@ ROOT_PATH = str(Path(__file__).parent.absolute().parent.absolute())
 sys.path.append(ROOT_PATH)
 
 from flask import Flask, render_template
-from settings import DEBUG, PORT, HOST
+from settings import DEBUG
 
 APP_PATH = str(Path(__file__).parent.absolute())
 APP_STATIC_PATH = os.path.join(APP_PATH, 'static')
@@ -23,6 +23,7 @@ def home():
 
 
 if __name__ == "__main__":
+    # used locally only
     app.run(debug=DEBUG,
-            port=PORT,
-            host=HOST)
+            port=5005,
+            host='localhost')

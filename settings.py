@@ -5,6 +5,5 @@ load_dotenv(find_dotenv(os.getenv('ENV_FILE', 'env')))
 
 trues = ['true', 't']
 
-DEBUG = os.environ['DEBUG'].lower() if os.environ['DEBUG'].lower() in trues else False
-PORT = int(os.environ['PORT'])
-HOST = os.environ['HOST']
+ENVIRONMENT = os.environ['ENVIRONMENT']
+DEBUG = os.getenv('DEBUG').lower() if (os.getenv('DEBUG') and os.getenv('DEBUG') in trues) else False
