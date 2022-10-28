@@ -1,13 +1,12 @@
 import os.path
-from pathlib import Path
 
 from flask import Flask, render_template
-from settings import DEBUG, FLASK_APP_SECRET_KEY
+from settings import DEBUG
+from settings import FLASK_APP_SECRET_KEY
+from settings import APP_PATH, APP_STATIC_PATH
 
 from forms import ContactForm
 
-APP_PATH = str(Path(__file__).parent.absolute())
-APP_STATIC_PATH = os.path.join(APP_PATH, 'static')
 app = Flask(__name__)
 
 app.config.update(APPLICATION_ROOT=APP_PATH,
