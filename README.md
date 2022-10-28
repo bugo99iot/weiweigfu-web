@@ -12,3 +12,7 @@ Website for the WeiWeiGFU project.
 ## Running the app
 
 - Use make target `start-app-local`.
+
+## Todos
+
+- Deploy: https://docs.digitalocean.com/tutorials/app-deploy-flask-app/.
