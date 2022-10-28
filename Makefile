@@ -11,4 +11,4 @@ help:
 
 .PHONY: start-app-local
 start-app-local: ## Start app locally
-	. venv/bin/activate && cd app && python app.py
+	. venv/bin/activate && python app.py

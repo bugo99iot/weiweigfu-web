@@ -1,6 +1,13 @@
+# utils
+email-validator==1.3.0
+
 # web
 Flask==2.2.2
+Flask-Bootstrap==3.3.7.1
+Flask-Mail==0.9.1
+Flask-WTF==1.0.1
 
+# deployment
 gunicorn==20.1.0
 
 # environment
