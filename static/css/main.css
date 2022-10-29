@@ -2,5 +2,13 @@ body {
   background-color: deeppink;
 }
 p {
-  color: greenyellow;
+  color: darkslategray;
+}
+
+h1 {
+  color: darkslategray;
+}
+
+h2 {
+  color: darkslategray;
 }

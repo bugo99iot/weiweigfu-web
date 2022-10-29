@@ -5,7 +5,7 @@ from settings import DEBUG
 from settings import FLASK_APP_SECRET_KEY
 from settings import APP_PATH, APP_STATIC_PATH
 
-from forms import ContactForm
+from utils.forms import ContactForm
 
 app = Flask(__name__)
 
