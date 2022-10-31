@@ -1,5 +1,6 @@
 body {
   background-color: #FFFF99;
+  text-align: center;
 }
 p {
   color: darkslategray;
@@ -10,5 +11,25 @@ h1 {
 }
 
 h2 {
+  color: darkslategray;
+}
+
+/* unvisited link */
+a:link {
+  color: darkslategray;
+}
+
+/* visited link */
+a:visited {
+  color: darkslategray;
+}
+
+/* mouse over link */
+a:hover {
+  color: darkslategray;
+}
+
+/* selected link */
+a:active {
   color: darkslategray;
 }
