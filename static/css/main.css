@@ -1,35 +1,62 @@
-body {
-  background-color: #FFFF99;
-  text-align: center;
+:root {
+  --primary_background: #FFFF99; /* pale-yellow */
+  --primary_text: darkslategray;
 }
+
+header {
+  height: 50px;
+}
+
+body {
+  background-color: var(--primary_background);
+  text-align: center;
+  width: 100%;
+}
+
+footer {
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+body > footer {
+   display: table-row;
+}
+
 p {
-  color: darkslategray;
+  color: var(--primary_text);
 }
 
 h1 {
-  color: darkslategray;
+  color: var(--primary_text);
 }
 
 h2 {
-  color: darkslategray;
+  color: var(--primary_text);
+}
+
+h3 {
+  color: var(--primary_text);
 }
 
 /* unvisited link */
 a:link {
-  color: darkslategray;
+  color: var(--primary_text);
 }
 
 /* visited link */
 a:visited {
-  color: darkslategray;
+  color: var(--primary_text);
 }
 
 /* mouse over link */
 a:hover {
-  color: darkslategray;
+  color: var(--primary_text);
 }
 
 /* selected link */
 a:active {
-  color: darkslategray;
+  color: var(--primary_text);
 }

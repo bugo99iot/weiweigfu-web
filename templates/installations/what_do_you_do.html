@@ -1,24 +1,13 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+{% extends 'core/layout.html' %}
 
-  <head>
-      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-      <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
-    <meta charset="utf-8">
-    <title>What do you do"</title>
-  </head>
-
-  <body>
-
+{% block content %}
     <br>
     <br>
     <br>
 
     <div style="text-align: center;">
       <h1> What do you do? </h1>
-      <h2> {{  what_do_you_do  }} </h2>
+      <h2> {{  what_do_you_do | safe  }} </h2>
     </div>
 
-  </body>
-
-</html>
+{% endblock %}

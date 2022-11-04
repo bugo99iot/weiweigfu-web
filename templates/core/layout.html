@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>{{ title }}</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+      <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+      {% block css %}{% endblock %}
+  </head>
+
+  <body>
+    {% include 'core/header.html' %}
+    {% block content %}{% endblock %}
+    {% include 'core/footer.html' %}
+  </body>
+
+</html>

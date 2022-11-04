@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+{% extends 'core/layout.html' %}
 
-  <head>
-      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-      <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
-    <meta charset="utf-8">
-    <title>WeiWeiGFU</title>
-  </head>
-
-  <body>
-
+{% block content %}
     <br>
     <br>
     <br>
@@ -19,9 +10,4 @@
       <h2> And forever will be. </h2>
     </div>
 
-  <!--  <img src="/static/images/math_art.jpg">  -->
-  <!-- <img src="{{  test_image  }}"> -->
-
-  </body>
-
-</html>
+{% endblock %}
