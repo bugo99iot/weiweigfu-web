@@ -1,3 +1,8 @@
 ENVIRONMENT=development
 DEBUG=True
+
 FLASK_APP_SECRET_KEY=my-key
+
+MAILGUN_API_KEY=
+MAILGUN_URL=
+EMAIL_RECEIVER=ugo.bertello@gmail.com

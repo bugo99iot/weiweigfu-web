@@ -9,6 +9,7 @@ from settings import FLASK_APP_SECRET_KEY
 from settings import APP_PATH, APP_STATIC_PATH
 from utils.load_data import ProjectData
 
+from utils.email_sender import send_email
 from utils.forms import ContactForm
 
 app = Flask(__name__)
@@ -27,10 +28,18 @@ def home():
 @app.route('/contact', methods=["GET", "POST"])
 def contact():
     form = ContactForm()
-    if form.validate_on_submit():
-        print(f"Name:{form.name.data}, E-mail:{form.email.data}, message: {form.message.data}")
 
-    return render_template("core/contact.html", form=form)
+    if request.method == 'POST':
+        r = send_email(text=form.message.data,
+                       sender_email=form.email.data,
+                       sender_name=form.name.data)
+        if r.status_code == 200:
+            return render_template('core/contact.html', success=True)
+        else:
+            return render_template('core/contact.html', fail=True)
+
+    elif request.method == 'GET':
+        return render_template('core/contact.html', form=form)
 
 
 @app.route("/meaning-of-life", methods=["GET"])
