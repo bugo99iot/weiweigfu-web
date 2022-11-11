@@ -19,6 +19,11 @@ app.config.update(APPLICATION_ROOT=APP_PATH,
                   SECRET_KEY=FLASK_APP_SECRET_KEY)
 
 
+# todo: restructure as views file
+# https://stackoverflow.com/questions/11994325/how-to-divide-flask-app-into-multiple-py-files
+# app.add_url_rule(endpoint='/', methods=, view_func=views.index)
+
+
 @app.route("/", methods=["GET"])
 def home():
     test_image = os.path.join('static', 'images', 'math_art.jpg')
