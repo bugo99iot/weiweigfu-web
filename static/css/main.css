@@ -60,3 +60,16 @@ a:hover {
 a:active {
   color: var(--primary_text);
 }
+
+/* contact form */
+
+.contact_stringfield {
+  text-align: center;
+  width: 15em;
+}
+
+.contact_textareafield {
+  text-align: center;
+  height: 10em;
+  width: 40em;
+}

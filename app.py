@@ -71,7 +71,7 @@ def child():
 
 
 if __name__ == "__main__":
-    # used locally only for development
+    # used locally only, for development
     app.run(debug=DEBUG,
             port=5005,
             host='localhost')

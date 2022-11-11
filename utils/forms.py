@@ -4,7 +4,7 @@ from wtforms.validators import DataRequired, Email
 
 
 class ContactForm(FlaskForm):
-    name = StringField(label='Name', validators=[DataRequired()])
-    email = StringField(label='Email', validators=[DataRequired(), Email()])
-    message = TextAreaField(label='Message', validators=[DataRequired()])
+    name = StringField(label='Name', render_kw={'class': 'contact_stringfield'}, validators=[DataRequired()])
+    email = StringField(label='Email', render_kw={'class': 'contact_stringfield'}, validators=[DataRequired(), Email()])
+    message = TextAreaField(label='Message', render_kw={'class': 'contact_textareafield'}, validators=[DataRequired()])
     send = SubmitField(label="Send")
