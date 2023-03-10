@@ -10,7 +10,8 @@ from settings import APP_PATH, APP_STATIC_PATH
 from utils.load_data import ProjectData
 
 from utils.email_sender import send_email
-from utils.forms import ContactForm
+from forms.contact import ContactForm
+from forms.meq30 import Meq30Form
 
 app = Flask(__name__)
 
@@ -45,6 +46,12 @@ def contact():
 
     elif request.method == 'GET':
         return render_template('core/contact.html', form=form)
+
+
+@app.route('/meq30', methods=["GET", "POST"])
+def meq30():
+    form = Meq30Form()
+    return render_template('installations/meq30.html', form=form)
 
 
 @app.route("/meaning-of-life", methods=["GET"])

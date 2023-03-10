@@ -1,0 +1,127 @@
+{% extends 'core/layout.html' %}
+
+{% block content %}
+<div class="contact">
+    <h3>MEQ 30 </h3>
+
+    {% if success %}
+
+        <p>Thank you for your message.</p>
+
+    {% elif fail %}
+
+        <p>Something went wrong.</p>
+
+        <p>Please check your email address and <a href={{ url_for('contact') }}>try again</a>.</p>
+
+    {% else %}
+
+        <form action="{{ url_for('meq30') }}" method=post>
+            {{ form.csrf_token }}
+            <div>
+                <p>
+                    The revised <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3539773/">Mystical Experience
+                    Questionnaire</a> (MEQ30) was developed as a tool for the evaluation of single
+                    mystical experiences occasioned by hallucinogens.
+                </p>
+
+                <p>
+                    Fill-in the questions below and discover the scale of your mystical experience.
+                </p>
+
+                <p>
+                    Answers range from <i>None</i> (not experienced at all) to <i>Extreme</i> (stronger than any
+                    other time in my life).
+                </p>
+
+
+                <p>
+                    ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+                </p>
+
+                <p>
+                    <b>Substance</b>
+                </p>
+
+                <p>
+                    {{ form.substance.label }} <br>
+                    {{ form.substance() }}
+                </p>
+
+                <p>
+                    <b>Factor 1: Mystical</b>
+                </p>
+
+                <p>
+                    <i>Internal unity</i>
+                </p>
+
+                <p>
+                    {{ form.q1.label }} <br>
+                    {{ form.q1() }}
+                </p>
+
+                <p>
+                    <i>External unity</i>
+                </p>
+
+                <p>
+                    {{ form.q7.label }} <br>
+                    {{ form.q7() }}
+                </p>
+
+                <p>
+                    <i>Noetic quality</i>
+                </p>
+
+                <p>
+                    {{ form.q10.label }} <br>
+                    {{ form.q10() }}
+                </p>
+
+                <p>
+                    <i>Sacredness</i>
+                </p>
+
+                <p>
+                    {{ form.q13.label }} <br>
+                    {{ form.q13() }}
+                </p>
+
+                <p>
+                    <b>Factor 2: Positive Mood</b>
+                </p>
+
+                <p>
+                    {{ form.q16.label }} <br>
+                    {{ form.q16() }}
+                </p>
+
+                <p>
+                    <b>Factor 3: Transcendence of Time and Space</b>
+                </p>
+
+                <p>
+                    {{ form.q22.label }}<br>
+                    {{ form.q22() }}
+                </p>
+
+                <p>
+                    <b>Factor 4: Ineffability</b>
+                </p>
+
+                <p>
+                    {{ form.q28.label }}<br>
+                    {{ form.q28() }}
+                </p>
+                <p>
+                    {{ form.get_score }}
+                </p>
+            </div>
+        </form>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}
